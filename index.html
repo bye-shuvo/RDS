@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubel Departmental Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav">
+            <div class="logo">
+                <a href="index.html"><img src="Logo.png" alt="logo"></a>
+                <h1><a href="index.html">Rubel Departmental Store</a></h1>
+            </div>
+            <ul>
+                <i class="fa-solid fa-bars" id="dot" onclick="menuopen()"></i>
+                <i class="fa-solid fa-xmark" id="x_mark" onclick="menuclose()"></i>
+                <div class="list_items" id="link_list">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> HOME</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-address-card"></i>ABOUT</a></li>
+                    <li><a href="address.html"><i class="fa-solid fa-location-dot"></i>ADDRESS</a></li>
+                    <li>
+                        <a href="contact.html" class="contact">CONTACT</a>
+                        <ul class="dropdown" id="dropdown_menu">
+                            <li><a href="contact.html"><i class="fa-solid fa-phone"></i>Mobile</a></li>
+                            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>Email</a></li>
+                            <li><a href="contact.html"><i class="fa-brands fa-whatsapp"></i>Whatsapp</a></li>
+                            <li><a href="contact.html"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="scroll_watcher"></div>
+    <main id="main" onclick="menuclose()">
+        <div class="sec1">
+            <div class="img1">
+                <img id="photocopy" src="photocopy.png" alt="img1">
+                <img id="blob_photocopy" src="blob-haikei_photocopy.png" alt="blob_bg">
+            </div>
+            <div class="p1">
+                <h1>Photocopy</h1>
+                <p>📄 Copy that! Our departmental store's got the vibe for your photocopy needs.<br>🖨️ Need a copy?
+                    We've got you covered – swift, sharp, and hassle-free! <br> ✨ Copying made cool! Get crisp copies in
+                    a snap at our store.</p>
+            </div>
+        </div>
+        <div class="sec2">
+            <div class="img2">
+                <img id="computer" src="computer_corner2.png" alt="img2">
+                <img id="blob_bg" src="blob-haikei_computer.png" alt="blob_bg">
+            </div>
+            <div class="p2">
+                <h1>Computer Corner</h1>
+                <P>📸 Picture this: High-quality prints, low-effort perfection. It's all here, right at your fingertips!
+                    <br>✨ Unleash the power of pixels with our top-notch photo printing – where every click comes to
+                    life! <br> 🌐 Click, print, connect – all in one place! Our departmental store's got the tech-savvy
+                    touch you need.
+                </P>
+            </div>
+        </div>
+        <div class="sec3">
+            <div class="img3">
+                <img id="bkash" src="bkash-logo-0C1572FBB4-seeklogo.com.png" alt="Bkash_logo">
+                <img id="gp" src="Grameenphone-logo.png" alt="grameen_phone_logo">
+                <img id="robi" src="robi.png" alt="robi_logo">
+                <img id="nogod" src="nogod.png" alt="nogod_logo">
+                <img id="teletalk" src="teletalk.png" alt="teletalk">
+                <img id="recharge" src="unnamed (1).png" alt="Recharge">
+                <img id="dokan_pic" src="Recharge_corner.png" alt="dokan_pic">
+                <img id="rocket" src="rocket.png" alt="rocket_logo">
+                <img id="banglalink" src="banglalink.png" alt="banglalink_logo">
+                <img id="blob_recharge" src="blob-haikei_recharge.png" alt="blob_bg">
+
+            </div>
+            <div class="p3">
+                <h1>Mobile Recharge</h1>
+                <p>⚡ Stay connected without missing a beat! Top up your mobile talktime hassle-free in-store. <br> 🌐 No
+                    more dead zones! Recharge your phone and power up your conversations right here. <br> 💳 Bkash ,
+                    Rocket
+                    Available!!!</p>
+            </div>
+        </div>
+        <div class="sec4">
+            <div class="img4">
+                <img id="Stationary_photo1" src="stationary_photo.jpg" alt="sta_1">
+                <img id="Stationary_photo2" src="stationary_photo1.jpg" alt="sta_2">
+                <img id="blob_stationary" src="blob-haikei_stationary.png" alt="sta_2">
+            </div>
+            <div class="p4">
+                <h1>Stationary Products</h1>
+                <p>
+                    ✏️ "Unlock Your Creativity!" Our departmental store is your haven for stylish pens, vibrant
+                    notebooks, and all the stationery essentials to transform ideas into reality. <br>
+
+                    📚 "Stationery Chic!" Elevate your desk game with our trendy collection – because your workspace
+                    should be as inspiring as your dreams. <br>
+
+                    🖊️ "Write in Style!" From sleek pens that make a statement to notebooks that spark innovation,
+                    discover a world of stationery sophistication at our store. <br>
+
+                    🌈 "Color Your World!" Dive into a spectrum of creativity with our rainbow of markers, pens, and
+                    folders – because organized chaos never looked so good! <br>
+
+                    📓 "Note-Worthy Finds!" Jot down your thoughts on pages that match your vibe. Explore our curated
+                    stationery section and turn every note into a masterpiece!</p>
+            </div>
+        </div>
+
+    </main>
+    <footer onclick="menuclose()">
+        <div class="copyright" id="copyright">
+            <h1>Rubel Departmental Store</h1>
+            <p><br> <i class="fa-regular fa-copyright"></i> 2024 bye_shuvo all right
+                received. </p>
+            <img href="index.html" src="Logo.png" alt="logo">
+        </div>
+        <div class="dev_info">
+            <div class="link">
+                <a id="instagram" href="https://www.instagram.com/bye_shuvo/"><i class="fa-brands fa-instagram"></i></a>
+                <a id="facebook" href="https://www.facebook.com/profile.php?id=100091304300206"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a id="discord" href="https://discordid.netlify.app/?id=736073572912594984"><i
+                        class="fa-brands fa-discord"></i></a>
+                <a id="whatsapp" href="https://api.whatsapp.com/send?phone=8801738482246"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <h1>Developer's Information</h1>
+            <p>bye_shuvo aka <br> Md. Abu Hasnat Shuvo</p>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
