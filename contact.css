@@ -1,0 +1,852 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.header {
+    height: 9vh;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+
+.scroll_watcher {
+    height: 5px;
+    width: 100%;
+    background-color: #23e851;
+    animation: scroll linear;
+    animation-timeline: scroll();
+    position: sticky;
+    top: 9vh;
+    scale: 0 1;
+    z-index: 9;
+}
+
+@keyframes scroll {
+    to {
+        scale: 1 1;
+    }
+}
+
+main {
+    background-image: url(\polygon-scatter-haikei.png);
+}
+
+.nav {
+    height: inherit;
+    width: inherit;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    width: 50%;
+}
+
+.logo img {
+    height: 8vh;
+    width: 4.29vw;
+    position: relative;
+    right: 7vw;
+    transition: all 1s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav .logo h1 a {
+    color: rgb(225, 241, 255);
+    font-weight: bolder;
+    position: relative;
+    right: 6vw;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav #dot {
+    display: none;
+}
+
+.nav #x_mark {
+    display: none;
+}
+
+.nav .logo h1 a:hover {
+    background-image: linear-gradient(90deg, #41c1fe, #ffa25d);
+    background-clip: text;
+    color: transparent;
+}
+
+.nav ul {
+    height: inherit;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1vw;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    height: 5vh;
+    width: 7vw;
+    text-align: center;
+    margin-right: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    display: block;
+    position: relative;
+    top: 1.4vh;
+}
+
+ul li a i {
+    padding-right: 5px;
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown {
+    width: max-content;
+    position: absolute;
+    display: none;
+    z-index: 11;
+    top: 5vh;
+    right: -1vw;
+    padding-left: 2.5vw;
+    height: max-content;
+    padding-bottom: 1vh;
+    border-radius: 7px;
+    padding-top: 3vh;
+    padding-right: 1.5vw;
+    transition: all 0.5s ease-in-out;
+    height: 25vh;
+}
+
+ul li:hover {
+    background-color: rgba(240, 12, 12, 0.87);
+    backdrop-filter: transparent;
+    box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgb(108, 108, 108);
+    border-radius: 7px;
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+    width: 98vw
+}
+
+.sec .img {
+    height: inherit;
+    width: calc(100vw / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8;
+    scale: 0.8;
+    position: relative;
+    top: -7vh;
+
+}
+
+.sec .img #blob_contact {
+    height: 100vh;
+    width: 51vw;
+    object-fit: contain;
+    position: absolute;
+    top: 3vh;
+    left: 5vh;
+    z-index: 0;
+}
+
+.sec .img #logo {
+    height: 22vh;
+    width: 11vw;
+    object-fit: cover;
+    position: relative;
+    top: 5vh;
+    left: 49vh;
+    z-index: 1;
+}
+
+.sec .img #phone {
+    height: 11vh;
+    width: 6vw;
+    object-fit: cover;
+    position: relative;
+    top: 7vh;
+    left: 25vh;
+    z-index: 1;
+}
+
+.sec .img #email {
+    height: 10vh;
+    width: 9vw;
+    object-fit: cover;
+    position: relative;
+    top: 38vh;
+    left: 19vh;
+    z-index: 1;
+}
+
+.sec .img #whatsapp {
+    height: 14vh;
+    width: 8vw;
+    object-fit: cover;
+    position: relative;
+    top: 5vh;
+    left: -26vh;
+    z-index: 1;
+}
+
+.sec .img #facebook {
+    height: 10vh;
+    width: 6vw;
+    object-fit: cover;
+    position: relative;
+    top: -23vh;
+    left: 32vh;
+    z-index: 1;
+}
+
+.sec .contact {
+    height: inherit;
+    width: calc(100vw - calc(100vw / 3));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.5;
+    padding-left: 13vw;
+}
+
+.sec .contact .box h2 {
+    font-size: 18px;
+    position: relative;
+    left: 4vw;
+    top: 4px;
+}
+
+.sec .contact #name {
+    position: relative;
+    right: 3vw;
+}
+
+.sec .contact h2 a {
+    text-decoration: none;
+    color: #00a8ff;
+}
+
+.sec .contact #logo_box {
+    position: absolute;
+    top: 0vh;
+    left: 6vw;
+}
+
+.sec .contact .box {
+    height: 6vh;
+    width: 25vw;
+    box-shadow: 0px 1px 9px 2px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    z-index: 1;
+    margin-bottom: 3vh;
+    padding-top: 8px;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    position: relative;
+    right: 1vw;
+}
+
+.sec .contact .box:hover {
+    color: white;
+}
+
+.sec .contact .box::before {
+    content: '';
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    height: 7vh;
+    width: 0%;
+    transform: skewX(35deg);
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: width 1s ease-in-out;
+    z-index: 0;
+}
+
+.sec .contact .box:hover::before {
+    width: 104%;
+}
+
+.sec .contact .circle {
+    height: 8vh;
+    width: 4vw;
+    border-radius: 2vw;
+    box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.8) inset;
+    background-color: #ffffff;
+    z-index: 2;
+}
+
+.sec .contact #circle_phone {
+    position: absolute;
+    top: 40.5vh;
+    left: 52vw;
+}
+
+.sec .contact #circle_envelope {
+    position: absolute;
+    top: 49.6vh;
+    left: 52vw;
+}
+
+.sec .contact #circle_whats_app {
+    position: absolute;
+    top: 58.5vh;
+    left: 52vw;
+}
+
+.sec .contact #circle_fb {
+    position: absolute;
+    top: 67.7vh;
+    left: 52vw;
+}
+
+.sec .contact .circle #phone {
+    font-size: 39px;
+    position: relative;
+    top: 23px;
+    left: 12px;
+    color: #ff0000;
+}
+
+.sec .contact .circle #envelope {
+    font-size: 41px;
+    position: relative;
+    top: 11px;
+    left: 11px;
+    color: transparent;
+    background-image: linear-gradient(45deg, #ff0000, #001eff);
+    background-clip: text;
+}
+
+.sec .contact .circle #whats_app {
+    font-size: 52px;
+    position: relative;
+    top: 4px;
+    left: 13px;
+    color: #00ff14;
+}
+
+.sec .contact .circle #fb {
+    font-size: 60px;
+    position: relative;
+    top: 25px;
+    left: 0px;
+    color: #005eff;
+}
+
+footer {
+    height: 17vh;
+    width: auto;
+    color: white;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30vw;
+}
+
+footer #copyright {
+    position: relative;
+    right: 15vw;
+}
+
+footer p {
+    position: relative;
+    right: 0.7vw;
+}
+
+footer #copyright p {
+    position: relative;
+    right: 0vh;
+}
+
+footer #copyright h1 {
+    font-size: 21px;
+}
+
+footer img {
+    height: 14vh;
+    width: 7vw;
+    position: absolute;
+    left: 44vw;
+    bottom: -3vh;
+    transition: all 1s ease-in-out;
+}
+
+footer img:hover {
+    cursor: pointer;
+    scale: 1.1;
+
+}
+
+footer .dev_info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    left: 14vw;
+    top: 1vh;
+}
+
+footer .dev_info h1 {
+    font-size: large;
+}
+
+footer .dev_info .link {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 4vh;
+    position: relative;
+    bottom: 1vh;
+    font-size: 24px;
+}
+
+footer .dev_info .link a {
+    text-decoration: none;
+    text-decoration: none;
+    color: cornflowerblue;
+    transition: all 0.2s ease-in-out;
+}
+
+footer .dev_info .link a:hover {
+    transform: scale(1.3);
+}
+
+footer .dev_info .link #instagram:hover {
+    background-image: linear-gradient(45deg, #8319f8, #fc1b6f);
+    background-clip: text;
+    color: transparent;
+}
+
+footer .dev_info .link #facebook:hover {
+    color: #0866ff;
+}
+
+footer .dev_info .link #discord:hover {
+    color: #4d16ce;
+}
+
+footer .dev_info .link #whatsapp:hover {
+    color: #23e86b;
+}
+
+@media screen and (max-width: 576px) {
+
+    main {
+        overflow: hidden;
+    }
+
+    .scroll_watcher {
+        height: 3px;
+        background-color: #0fee43;
+    }
+
+    .nav #dot {
+        display: block;
+        position: relative;
+        top: 0vh;
+        right: 5vw;
+        font-size: 22px;
+        color: azure;
+        visibility: visible;
+        transform: rotateX('360deg');
+    }
+
+    .nav #x_mark {
+        display: block;
+        position: absolute;
+        top: 3vh;
+        right: 7vw;
+        font-size: 22px;
+        color: azure;
+        visibility: hidden;
+        text-align: center;
+    }
+
+    .nav .list_items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 9vh;
+        right: 1vh;
+        height: 25vh;
+        width: 50vw;
+        padding: 2vh 0vw;
+        background-color: #00a8ff;
+        border-radius: 0px 0px 12px 12px;
+        visibility: hidden;
+        transition: all 0.2s ease-in-out;
+        overflow: hidden;
+    }
+
+    .nav {
+        height: 9vh;
+    }
+
+    .nav h1 {
+        font-size: 18px;
+        z-index: 5;
+        position: relative;
+        left: 12vw;
+    }
+
+    .nav .logo h1 a {
+        background-image: linear-gradient(90deg, #41c1fe, #ffa25d);
+        background-clip: text;
+        color: transparent;
+        font-variant: petite-caps;
+        font-family: system-ui;
+    }
+
+    .nav ul li {
+        position: relative;
+        width: inherit;
+        font-size: 10px;
+        font-weight: bolder;
+        box-shadow: none;
+        border: 0px;
+    }
+
+    .nav ul li ul.dropdown {
+        display: none;
+    }
+
+    .nav ul li:hover {
+        background-color: rgba(79, 79, 79, 0.689);
+        box-shadow: none;
+    }
+
+    .nav ul li a {
+        padding-top: 0vh;
+    }
+
+    .nav ul {
+        width: 10vw;
+        flex-wrap: wrap;
+    }
+
+    .nav .logo {
+        display: flex;
+        height: max-content;
+        width: 90vw;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav .logo a img {
+        position: relative;
+        left: 4vw;
+        width: 17vw;
+        height: 8vh;
+    }
+
+    .sec {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .sec .img {
+        height: 22vh;
+        width: 11vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scale: 1;
+        position: relative;
+        top: 2vh;
+        left: -4vw;
+    }
+
+    .sec .img #logo {
+        height: 23vh;
+        width: 28vw;
+        object-fit: contain;
+        position: relative;
+        top: 10vh;
+        left: 17vh;
+        z-index: 1;
+    }
+
+    .sec .img #blob_contact {
+        height: 41vh;
+        width: 84vw;
+        object-fit: contain;
+        position: absolute;
+        top: 1vh;
+        left: -16vh;
+        z-index: 0;
+    }
+
+    .sec .img #facebook {
+        height: 8vh;
+        width: 13vw;
+        object-fit: contain;
+        position: relative;
+        top: -4vh;
+        left: 7vh;
+        z-index: 1;
+    }
+
+    .sec .img #whatsapp {
+        height: 11vh;
+        width: 21vw;
+        object-fit: contain;
+        position: relative;
+        top: 24vh;
+        left: -8vh;
+        z-index: 1;
+    }
+
+    .sec .img #email {
+        height: 6vh;
+        width: 14vw;
+        object-fit: contain;
+        position: relative;
+        top: 10vh;
+        left: -14vh;
+        z-index: 1;
+    }
+
+    .sec .img #phone {
+        height: 8vh;
+        width: 14vw;
+        object-fit: contain;
+        position: relative;
+        top: 11vh;
+        left: -3vh;
+        z-index: 1;
+    }
+
+    .sec .contact {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: small;
+        line-height: 1.5;
+        padding-left: 9vw;
+    }
+
+    .sec .contact h1 {
+        font-size: 24px;
+    }
+
+    .sec .contact .box h2 {
+        font-size: 15px;
+        position: relative;
+        left: 15vw;
+        top: 0px;
+    }
+
+    .sec .contact h2 a {
+        text-decoration: none;
+        color: #00a8ff;
+    }
+
+    .sec .contact #logo_box {
+        position: absolute;
+        top: 15vh;
+        left: -43vw;
+    }
+
+    .sec .contact .box {
+        height: 5vh;
+        width: 85vw;
+    }
+
+    .sec .contact .circle {
+        height: 7vh;
+        width: 14vw;
+        border-radius: 7vw;
+        box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.8) inset;
+        background-color: #ffffff;
+        z-index: 2;
+    }
+
+    .sec .contact #circle_phone {
+        position: absolute;
+        top: 42.1vh;
+        left: 52vw;
+    }
+
+    .sec .contact #circle_envelope {
+        position: absolute;
+        top: 50.1vh;
+        left: 52vw;
+    }
+
+    .sec .contact #circle_whats_app {
+        position: absolute;
+        top: 58.2vh;
+        left: 52vw;
+    }
+
+    .sec .contact #circle_fb {
+        position: absolute;
+        top: 66.1vh;
+        left: 52vw;
+    }
+
+    .sec .contact .circle #phone {
+        font-size: 31px;
+        position: relative;
+        top: 21px;
+        left: 11px;
+        color: #ff0000;
+    }
+
+    .sec .contact .circle #envelope {
+        font-size: 35px;
+        position: relative;
+        top: 9px;
+        left: 8px;
+        color: transparent;
+        background-image: linear-gradient(45deg, #ff0000, #001eff);
+        background-clip: text;
+    }
+
+    .sec .contact .circle #whats_app {
+        font-size: 42px;
+        position: relative;
+        top: 5px;
+        left: 11px;
+        color: #00ff14;
+    }
+
+    .sec .contact .circle #fb {
+        font-size: 49px;
+        position: relative;
+        top: 21px;
+        left: 2px;
+        color: #005eff;
+    }
+
+    footer {
+        height: 18vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    footer #copyright {
+        left: 7vw;
+        height: initial;
+        width: fit-content;
+        top: 4vh;
+    }
+
+    footer #copyright p {
+        font-size: small;
+        position: absolute;
+        display: block;
+        width: max-content;
+        left: 0vw;
+        top: 0vh;
+    }
+
+    footer #copyright h1 {
+        font-size: 4vw;
+        position: absolute;
+        display: block;
+        width: max-content;
+        right: -28vw;
+        bottom: 3vw;
+    }
+
+    footer img {
+        height: 8vh;
+        width: 17vw;
+        bottom: 4vh;
+        left: -16vw;
+    }
+
+    footer .dev_info {
+        height: initial;
+        width: 39vw;
+        justify-content: center;
+        align-items: center;
+        right: 0vw;
+        left: 10vw;
+        top: -4vw;
+    }
+
+    footer .dev_info h1 {
+        font-size: 13px;
+        display: block;
+        width: max-content;
+        position: relative;
+        top: 1vh;
+        right: 0vw;
+        left: 3vw;
+    }
+
+    footer .dev_info p {
+        display: block;
+        height: fit-content;
+        width: max-content;
+        position: relative;
+        font-size: small;
+        left: 3vw;
+        top: 1vh;
+    }
+
+    footer .dev_info .link {
+        gap: 4vw;
+        top: 0vh;
+        left: 3vw;
+    }
+}
